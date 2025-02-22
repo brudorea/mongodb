@@ -12,6 +12,15 @@ const clinteSchema = Schema({
     },
     foneCliente: {
         type: String
+    },
+    cpf: {
+        type: String,
+        unique: true,
+        index: true
+    },
+    dataCadastro: {
+        type: Date,
+        default: Date.now
     }
 }, {versionKey: false})
  
